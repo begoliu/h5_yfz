@@ -9,8 +9,20 @@ class ShareAppIndex extends Component {
         document.title = "邀请有奖";
     }
 
-    handleTarget = () => {
+    handleTarget = (event) => {
         // this.props.history.push("/");
+        switch (event) {
+            case "wx":
+                window.h5Bridge.onShareWeChat("titleBego","desc","image_url", "url");
+                alert("wx-bego");
+                break;
+            case "py":
+                window.h5Bridge.onShareCircle("title","desc","image_url", "url");
+                alert("py-bego");
+                break;
+        }
+        
+        
     };
     render() {
         return (
@@ -61,8 +73,8 @@ class ShareAppIndex extends Component {
                     </ul>
                 </div>
                 <ul className="share-btn mt30">
-                    <li onClick={window.h5Bridge.onShareWeChat("title","desc","image_url", "url")}>微信邀请</li>
-                    <li onClick={window.h5Bridge.onShareCircle("title","desc","image_url", "url")}>朋友圈邀请</li>
+                    <li onClick={this.handleTarget("wx")}>微信邀请</li>
+                    <li onClick={this.handleTarget("py")}>朋友圈邀请</li>
                 </ul>
             </div>
         );
