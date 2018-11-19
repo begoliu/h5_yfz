@@ -13,12 +13,16 @@ class ShareAppIndex extends Component {
         // this.props.history.push("/");
         switch (event) {
             case "wx":
+                alert("wx-x");
                 window.h5Bridge.onShareWeChat("titleBego","desc","image_url", "url");
                 alert("wx-bego");
                 break;
             case "py":
                 window.h5Bridge.onShareCircle("title","desc","image_url", "url");
                 alert("py-bego");
+                break;
+            default:
+                alert("default");
                 break;
         }
         
