@@ -10,23 +10,21 @@ class ShareAppIndex extends Component {
     }
 
     handleTarget = (event) => {
+        
         // this.props.history.push("/");
         switch (event) {
             case "wx":
                 alert("wx-x");
-                window.h5Bridge.onShareWeChat("titleBego","desc","image_url", "url");
-                alert("wx-bego");
+                //window.h5Bridge.onShareWeChat("titleBego","desc","image_url", "url");
                 break;
             case "py":
-                window.h5Bridge.onShareCircle("title","desc","image_url", "url");
+                //window.h5Bridge.onShareCircle("title","desc","image_url", "url");
                 alert("py-bego");
                 break;
             default:
                 alert("default");
                 break;
         }
-        
-        
     };
     render() {
         return (
@@ -39,7 +37,7 @@ class ShareAppIndex extends Component {
                     </div>
                     <span>您邀请的好友也可获得24小时畅玩会员特权</span>
                 </div>
-                <button className="btn-max" onClick={this.handleTarget}>立即邀请</button>
+                <button className="btn-max" onClick={()=>this.handleTarget("wx")}>立即邀请</button>
                 <h4>――&nbsp;&nbsp;邀请记录&nbsp;&nbsp;――</h4>
                 <div className="inviter-list">
                     <h4>已获得 <b className="c-red fs28">72</b> 小时畅玩会员特权</h4>
@@ -77,8 +75,8 @@ class ShareAppIndex extends Component {
                     </ul>
                 </div>
                 <ul className="share-btn mt30">
-                    <li onClick={this.handleTarget("wx")}>微信邀请</li>
-                    <li onClick={this.handleTarget("py")}>朋友圈邀请</li>
+                    <li onClick={()=>this.handleTarget("wx")}>微信邀请</li>
+                    <li onClick={()=>this.handleTarget("py")}>朋友圈邀请</li>
                 </ul>
             </div>
         );
