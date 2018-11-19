@@ -2,7 +2,7 @@
   "name": "h5_yfz",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://47.75.148.174:81/",
+
   "dependencies": {
     "node-sass": "^4.10.0",
     "react": "^16.6.3",

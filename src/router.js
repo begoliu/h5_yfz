@@ -12,12 +12,12 @@ import "react-flexible";
 
 
 class RootRouter extends Component {
-    // app/share
+    // share/index
     render() {
         return (
             <Switch>
-                <Route exact path="/" component={ShareIndex} />
-                <Route exact path="/share/index" component={GotBagIndex} />
+                <Route exact path="/app/share" component={ShareIndex} />
+                <Route exact path="/" component={GotBagIndex} />
                 <Route exact path="/share/form" component={ShareFormIndex} />
                 <Route exact path="/share/download" component={ShareDownloadIndex} />
             </Switch>
