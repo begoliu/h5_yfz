@@ -61,8 +61,8 @@ class ShareAppIndex extends Component {
                     </ul>
                 </div>
                 <ul className="share-btn mt30">
-                    <li onClick={window.wx.actionFromJs()}>微信邀请</li>
-                    <li onClick={window.wx.actionFromJs()}>朋友圈邀请</li>
+                    <li onClick={window.h5Bridge.onShareWeChat("title","desc","image_url", "url")}>微信邀请</li>
+                    <li onClick={window.h5Bridge.onShareCircle("title","desc","image_url", "url")}>朋友圈邀请</li>
                 </ul>
             </div>
         );

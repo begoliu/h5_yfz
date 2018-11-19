@@ -17,7 +17,7 @@ class RootRouter extends Component {
         return (
             <Switch>
                 <Route exact path="/app/share" component={ShareIndex} />
-                <Route exact path="/share/index" component={GotBagIndex} />
+                <Route exact path="/" component={GotBagIndex} />
                 <Route exact path="/share/form" component={ShareFormIndex} />
                 <Route exact path="/share/download" component={ShareDownloadIndex} />
             </Switch>
