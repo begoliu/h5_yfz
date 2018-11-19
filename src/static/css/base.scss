@@ -1,0 +1,100 @@
+$px:0.0133333333333333;
+
+html,body,ul,li,img,a,p,div,form,input,h2,h4,button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+html{
+  height:100%;
+}
+
+body{
+  font-family: "微软雅黑",sans-serif;
+  font-size:16px;
+}
+
+a,
+a:hover{
+  color:#666;
+  text-decoration:none;
+}
+
+#root{
+  width:100%;
+  max-width: 750px;
+  min-width: 320px;
+  margin:0 auto;
+  background-color:#ccc;
+}
+
+.clear:before,
+.clear:after{
+  content:"";
+  display:block;
+  clear:both;
+  vertical-align: bottom;
+}
+
+
+//按钮
+button,input{
+  border:none;
+  outline: none;
+}
+
+li{
+  list-style: none;
+}
+
+.auto{
+  margin:0 auto;
+}
+
+.mt30{
+  margin-top:$px*30rem;
+}
+.mt40{
+  margin-top:$px*40rem;
+}
+
+.fs28{
+  font-size:$px*28rem;
+}
+
+
+.c-red{
+  color:#f45429;
+}
+.c-gray{
+  color:#666;
+}
+
+
+//按钮
+.btn-max{
+  width:$px*560rem;
+  height:$px*100rem;
+  color:#5f260b;
+  font-size:$px*40rem;
+  background:linear-gradient(to bottom,#FAF3B7,#F2D888);
+  margin:$px*10rem auto;
+  display:block;
+  border-radius:$px*40rem;
+}
+.btn-min{
+  width:$px*140rem;
+  height:$px*60rem;
+  color:#FFF;
+  font-size:$px*24rem;
+  background:linear-gradient(to right,#F48C25,#F45429);
+  margin:$px*0rem auto;
+  display:block;
+  border-radius:$px*6rem;
+  
+}
+
+.btn-max:hover{
+  background:linear-gradient(to bottom,#F2D888,#FAF3B7);
+}
