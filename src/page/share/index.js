@@ -10,7 +10,7 @@ class ShareGotBagIndex extends Component {
     }
 
     handleGot = () => {
-        this.props.history.push("/invite")
+        this.props.history.push("/share/form")
 
     };
     render() {
