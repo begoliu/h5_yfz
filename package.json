@@ -3,17 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^3.10.8",
+    "axios": "^0.18.0",
+    "babel-plugin-import": "^1.11.0",
+    "install": "^0.12.2",
+    "iscroll": "^5.2.0",
+    "iscroll-luo": "^1.2.3",
+    "jquery": "^3.3.1",
     "node-sass": "^4.10.0",
+    "npm": "^6.4.1",
     "react": "^16.6.3",
+    "react-app-rewired": "^1.6.2",
     "react-dom": "^16.6.3",
     "react-flexible": "^1.0.7",
+    "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

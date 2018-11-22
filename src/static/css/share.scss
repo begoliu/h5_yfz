@@ -1,9 +1,286 @@
 $px:1/75;
 $px30:$px*30rem;
 
+:local(.textAutoScroll){
+    background-color: rgba(0, 0, 0, 0.6);
+    width:$px*420rem;
+    color: #FFF;
+    font-size: $px*22rem;
+    height:$px*56rem;
+    padding: 0 $px*30rem 0 $px*14rem;
+    border-radius: 0 20px 20px 0;
+    span{
+        margin-right:15px;
+    }
+}
+
+
+//app分享入口
+:local(.banner) {
+    position: relative;
+    img {
+        width: 100%;
+        display: block;
+    }
+    >div {
+        position: absolute;
+        height: $px*56rem;
+        line-height: $px*56rem;
+        left: 0;
+        right: 0;
+        top: $px*26rem;
+        display: flex;
+        justify-content: space-between;
+        overflow:hidden;
+        ul {
+            color: #FFF;
+            font-size: $px*22rem;
+            //-webkit-transition: top 1s linear;
+            li{
+                background-color: rgba(0, 0, 0, 0.6);
+                height:$px*56rem;
+                padding: 0 $px*30rem 0 $px*14rem;
+                border-radius: 0 20px 20px 0;
+            }
+        }
+        a {
+            position: absolute;
+            right: $px*20rem;
+            font-size: $px*22rem;
+            color: #f9edad;
+        }
+    }
+    > span {
+        position: absolute;
+        bottom: $px*35rem;
+        text-align: center;
+        left: 0;
+        right: 0;
+        color: #f9edad;
+        font-size: $px*28rem;
+    }
+}
+:local(.yfz-app-invite) {
+    background-color: #F45429;
+    padding-bottom: $px*160rem;
+   
+    > h4 {
+        font-size: $px*32rem;
+        color: #fdf5bf;
+        text-align: center;
+        font-weight: 500;
+        margin-top: $px*44rem;
+        margin-bottom: $px*30rem;
+    }
+    .inviter-list {
+        
+        background-color: #FFF;
+        border-radius: $px*6rem;
+        margin: 0 $px*30rem;
+        h4, li {
+            font-size: $px*24rem;
+            font-weight: 500;
+            height: $px*100rem;
+            line-height: $px*100rem;
+            padding: 0 $px*25rem;
+            border-bottom: 1px solid #E8E8E8;
+            vertical-align: middle;
+
+        }
+        ul {
+            height:$px*8*100rem;
+            padding-bottom: $px*75rem;
+        }
+        li {
+            vertical-align: middle;
+            * {
+                float: left;
+            }
+            .tel {
+                font-size: $px*28rem;
+                margin-right: $px*70rem
+            }
+            button, div.c-red {
+                float: right;
+                font-weight: 500;
+
+            }
+            button {
+                margin-top: $px*20rem;
+            }
+
+        }
+    }
+    .share-btn {
+        height: $px*120rem;
+        line-height: $px*120rem;
+        background: #FFF;
+        display: flex;
+        justify-content: space-around;
+        font-size: $px*30rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-top: 1px solid #E8E8E8;
+        li {
+            background: url("../images/share/icon_wb.png") no-repeat 0 $px*35rem;
+            padding-left: $px*60rem;
+            background-size: $px*49rem $px*49rem;
+            &:first-child {
+                background-image: url("../images/share/icon_wx.png")
+            }
+        }
+    }
+
+}
+
+
+//弹出窗口
+:local(.popup-share) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right:0;
+    background:#FFF;
+    z-index: 6;
+    height:0;
+    overflow:hidden;
+    transition: height 5s linear;
+
+
+    h2{
+        text-align:center;
+        font-size:$px*26rem;
+        font-weight:500;
+        line-height:$px*48rem;
+    }
+    ul{
+        width:100%;
+        padding:$px*100rem;
+    }
+    li{
+        width:calc(100%/3);
+        text-align:center;
+        display:inline-block;
+        font-size:$px*26rem;
+        i {
+            display:block;
+            margin:0 auto;
+            width:$px*70rem;
+            height:$px*70rem;
+            background:url('../../static/images/share/icon_share.png') no-repeat;
+            background-size:auto $px*70rem;
+        }
+        &.wx i{
+            background-position:0 0;
+        }
+        &.py i{
+            background-position:0 -$px*70rem;
+        }
+        &.link i{
+            background-position:0 -$px*140rem;
+        }
+
+    }
+
+    button{
+        height:$px*100rem;
+        width:100%;
+        text-align:center;
+        font-size:$px*28rem;
+        background-color:#FFF;
+        border-top:1px solid #DDDDDD;
+    }
+}
+:local(.popup-share-bg){
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    position:fixed;
+    z-index:5;
+    background:rgba(0, 0, 0, 0.6);
+    display:none;
+    overflow:hidden;
+}
+
+
+
+//微信分享首页
+:local(.yfz-bag) {
+    background:#F96160;
+    padding-bottom:$px*80rem;
+    height:100%;
+    > h4{
+        width:100%;
+        text-align:center;
+        height:$px*90rem;
+        line-height:$px*90rem;
+        font-size:$px*36rem;
+        font-weight:400;
+        color:#FFF;
+    }
+    > img {
+        width:100%;
+    }
+    .txt{
+        width:$px*612rem;
+        height:$px*172rem;
+        background:url('../images/share/bag_txt.png') no-repeat;
+        background-size:$px*612rem $px*172rem;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+
+        li{
+            color:#000;
+            font-size:$px*24rem;
+            line-height:$px*42rem;
+            margin-left:$px*145rem;
+        }
+    }
+    .btn-max{
+        width:$px*610rem;
+        margin-top:$px*60rem;
+        font-weight:700;
+
+    }
+}
+
+:local(.imgGroup){
+    display:flex;
+    justify-content: space-around;
+    margin-top:$px*35rem;
+    >li{
+        overflow:hidden;
+        img{
+            display:block;
+            width:$px*282rem;
+            height:$px*388rem;
+
+        }
+    }
+}
+
+:local(.gotBagImg){
+    text-align:center;
+    margin-top:$px*50rem;
+    img{
+
+        width:$px*600rem;
+        height:$px*90rem;
+    }
+
+}
+
+
+
+
 :local(.yfz-from){
     background-color:#db2a24;
-    padding-bottom:100px;
+    //padding-bottom:100px;
+    height:100%;
     .top-title{
         position: relative;
         >img{
@@ -64,6 +341,7 @@ $px30:$px*30rem;
 
 
 :local(.yfz-download){
+    height:100%;
     background-color:#FFEACE;
     padding-bottom:$px*100rem;
     .top{
@@ -76,15 +354,21 @@ $px30:$px*30rem;
         h4{
             font-size:$px*40rem;
             padding-top:$px*70rem;
+            color:#FFFBDC;
         }
         .tel{
             font-size:$px*28rem;
             margin-top:$px*30rem;
-            a{
+            span{
                 color:#FFFBDC;
                 margin-left:5px;
             }
         }
+    }
+    .spin{
+        position:fixed;
+        top:50px;
+        left:48%;
     }
     ul{
         margin:$px*30rem;
