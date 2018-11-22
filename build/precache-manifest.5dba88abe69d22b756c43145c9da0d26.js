@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/static/media/banner_line_logo.e9ed61fd.png"
   },
   {
-    "revision": "42108f4b51b3c2207fe5",
-    "url": "/static/css/main.31ac8166.chunk.css"
+    "revision": "b5fc3537cacb7c8c659a",
+    "url": "/static/css/main.2d766119.chunk.css"
   },
   {
     "revision": "6ddf838f5355487a76afd6567db6a045",
     "url": "/static/media/banner_txt_1.6ddf838f.jpg"
   },
   {
-    "revision": "2b39e889fa3424f7c8ed",
-    "url": "/static/js/1.2b39e889.chunk.js"
+    "revision": "d8f60e319c013554352b",
+    "url": "/static/js/1.d8f60e31.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/static/media/banner.259087ee.jpg"
   },
   {
-    "revision": "42108f4b51b3c2207fe5",
-    "url": "/static/js/main.42108f4b.chunk.js"
+    "revision": "b5fc3537cacb7c8c659a",
+    "url": "/static/js/main.b5fc3537.chunk.js"
   },
   {
     "revision": "9511fb3434f5b80f06f64eb614fa5770",
@@ -48,11 +48,11 @@ self.__precacheManifest = [
     "url": "/static/media/banner_line_money.9b2ae5d3.jpg"
   },
   {
-    "revision": "2b39e889fa3424f7c8ed",
-    "url": "/static/css/1.600ca59b.chunk.css"
+    "revision": "d8f60e319c013554352b",
+    "url": "/static/css/1.82e486b6.chunk.css"
   },
   {
-    "revision": "0a8c70d41df73b63a27149b7c12d6005",
+    "revision": "dfb1552aea924d68775dd9dc68afb9f0",
     "url": "/index.html"
   }
 ];

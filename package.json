@@ -6,6 +6,7 @@
     "antd": "^3.10.8",
     "axios": "^0.18.0",
     "babel-plugin-import": "^1.11.0",
+    "copy-to-clipboard": "^3.0.8",
     "install": "^0.12.2",
     "iscroll": "^5.2.0",
     "iscroll-luo": "^1.2.3",

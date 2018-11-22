@@ -1,6 +1,7 @@
 import styles from "../../static/css/share.scss";
 import logoImg from "../../static/images/share/icon_logo_small.png"
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import bannerImg from "../../static/images/share/banner.jpg";
 import {is_touch,reqJson} from "../../util/auth";
 import {encrypt} from "../../util/crypto";
@@ -9,6 +10,7 @@ import Luo from "iscroll-luo";
 import {shareApi, shareGotTelApi} from "../../api/api";
 import {message,Spin} from 'antd';
 import TextAutoScrollComp from "../../common/TextAutoScroll";
+import copy from 'copy-to-clipboard';
 
 
 
@@ -107,10 +109,9 @@ class ShareAppIndex extends Component {
                 this.handleCancel(this.boxData);
                 break;
             case "link":
-                //this.shareData.url.select(); // 选择对象
-                let clipBoardContent=this.shareData.url;
-                message.success(clipBoardContent);
-                this.props.clipboardData.setData("Text",clipBoardContent);
+                copy(this.shareData.url);
+                message.success('复制成功，如果失败，请手动复制.');
+                this.handleCancel(this.boxData);
                 break;
             default:
                 alert(event);
@@ -162,7 +163,7 @@ class ShareAppIndex extends Component {
                             <TextAutoScrollComp data = {this.state.phones} />
                         ) }
                         
-                        <a href="http://www.288.com">规则></a>
+                        <Link to="/app/help/user">规则></Link>
                     </div>
                     <span>您邀请的好友也可获得24小时畅玩会员特权</span>
                 </div>
