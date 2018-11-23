@@ -1,5 +1,5 @@
 import axios from 'axios';
-import base from './domain';
+import {baseApi} from './domain';
 import { message } from 'antd';
 
 
@@ -36,20 +36,20 @@ axios.interceptors.response.use(
 
 // 退出
 export const loginOut = params => {
-    return axios.get(`${base}/user/loginOut`, { params: params }).then(res => res.data);
+    return axios.get(`${baseApi}/user/loginOut`, { params: params }).then(res => res.data);
 };
 
 
 export const shareApi = params => {
-    return axios.post(`${base}/share/user`,params).then(res => res.data);
+    return axios.post(`${baseApi}/share/user`,params).then(res => res.data);
 };
 
 //邀请有奖，获取所有已被赠送畅玩会员的手机号
 export const shareGotTelApi = params => {
-    return axios.get(`${base}/share/members`,{ params: params }).then(res => res.data);
+    return axios.get(`${baseApi}/share/members`,{ params: params }).then(res => res.data);
 };
 
 //活动预处理用户注册（用户输入手机号后点击确认按钮)
 export const shareReceiveApi = params => {
-    return axios.post(`${base}/share/receive`,params).then(res => res.data);
+    return axios.post(`${baseApi}/share/receive`,params).then(res => res.data);
 };

@@ -27,8 +27,6 @@ class ShareFormComponent extends Component {
                 user_id:this.props.data.user_id || this.props.data.uid,
                 promotion_id:this.props.data.promotion_id,
             };
-            
-            
             this.props.modify && Object.assign(params,{replace_phone:this.props.data.phone});
             shareReceiveApi(params).then(async res => {
                 switch(res.code) {

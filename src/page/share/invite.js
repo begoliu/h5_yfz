@@ -11,6 +11,7 @@ import {shareApi, shareGotTelApi} from "../../api/api";
 import {message,Spin} from 'antd';
 import TextAutoScrollComp from "../../common/TextAutoScroll";
 import copy from 'copy-to-clipboard';
+import {baseUri} from '../../api/domain';
 
 
 
@@ -25,7 +26,6 @@ class ShareAppIndex extends Component {
             phones:[]
         }
     }
-
     componentDidMount() {
         document.title = "邀请好友";
         let params = reqJson(this.props.location.search);
@@ -44,7 +44,7 @@ class ShareAppIndex extends Component {
             title:"送你一个游戏云端挂机神器,还可免费看各大平台VIP视频哦",
             desc:"腾讯、爱奇艺、芒果TV、优酷VIP视频免费看;手机游戏云端24小时挂机不费流量！",
             image_url:logoImg,
-            url:'http://yfz.begoliu.com/share/index?hash=' + encrypt(JSON.stringify(params))
+            url:`${baseUri}/share/index?hash=` + encrypt(JSON.stringify(params))
         };
         this.boxData = {
             box:document.querySelector("." + styles['popup-share']),
@@ -52,7 +52,6 @@ class ShareAppIndex extends Component {
         };
        let autoScroll =  new AutoScroll();
         document.querySelector("#autoTxt") === null || autoScroll.txtScroll(document.querySelector("#autoTxt"),"top");
-        
     }
     
     getList = async (isload) => {
