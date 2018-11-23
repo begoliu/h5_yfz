@@ -5,13 +5,13 @@
  * 接口
  * @type {string}
  */
-let baseApi = 'http://trss.f3322.net:81/1.0.0';
+let baseApi = 'http://trss.f3322.net:6810/1.0.0';
 if (process.env.YFZ_NODE_ENV === 'release') {
-    baseApi = 'http://trss5951.f3322.net:81/1.0.0';
+    baseApi = 'http://trss5951.f3322.net:6810/1.0.0';
 } else if (process.env.YFZ_NODE_ENV === 'test') {
-    baseApi = 'http://http://trss1.f3322.net:81/1.0.0';
+    baseApi = 'http://http://trss1.f3322.net:6810/1.0.0';
 } else if(process.env.YFZ_NODE_ENV === 'dev') {
-    baseApi = 'http://trss.f3322.net:81/1.0.0';
+    baseApi = 'http://trss.f3322.net:6810/1.0.0';
 }
 
 /**
