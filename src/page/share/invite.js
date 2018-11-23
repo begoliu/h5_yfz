@@ -44,7 +44,7 @@ class ShareAppIndex extends Component {
             title:"送你一个游戏云端挂机神器,还可免费看各大平台VIP视频哦",
             desc:"腾讯、爱奇艺、芒果TV、优酷VIP视频免费看;手机游戏云端24小时挂机不费流量！",
             image_url:logoImg,
-            url:'http://trss.f3322.net:81/share/index?hash=' + encrypt(JSON.stringify(params))
+            url:'http://yfz.begoliu.com/share/index?hash=' + encrypt(JSON.stringify(params))
         };
         this.boxData = {
             box:document.querySelector("." + styles['popup-share']),
